@@ -1,0 +1,94 @@
+@import "../../constants/variables.scss";
+
+.side-bar-container {
+    z-index: 10;
+    position: fixed;
+    width: 245px;
+    top: 0;
+    left: 0;
+    padding-top: 5px;
+    height: 100vh;
+    background-color: #2a3644;
+    color: #b3b7bd;
+    overflow: scroll;
+
+    .side-bar-content {
+        margin-top: 100px;
+    }
+
+    .side-bar-header {
+        width: 245px;
+        position: fixed;
+        padding: 20px 0 5px 20px;
+        margin-bottom: 10px;
+        background-color: #2a3644;
+        -webkit-app-region: drag;
+        
+        &:hover {
+            background-color: #273140;
+            cursor: pointer;
+
+            .side-bar-header-user-full-name {
+                color: white;
+            }
+        }
+
+        .side-bar-header-team-name-text {
+            color: white;
+            font-size: 18px;
+        }
+
+        .side-bar-header-user-full-name {
+            margin-left: 5px;
+            font-size: 14px;
+        }
+    }
+
+    .side-bar-threads-row {
+        padding: 3px 0 3px 20px;
+        margin-bottom: 20px;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+        }
+
+        .side-bar-threads-row-all-thread {
+            margin-left: 5px;
+        }
+    }
+
+    .side-bar-section {
+        margin-bottom: 20px;
+
+        .side-bar-section-title {
+            padding-left: 20px;
+        }
+
+        .side-bar-section-item {
+            padding: 2px 0 2px 20px;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+                cursor: pointer;
+            }
+
+            &.active {
+                background-color: $active-blue;
+                color: white;
+            }
+
+            .side-bar-section-item-icon {
+                margin-right: 10px;
+
+                .side-bar-section-group-number {
+                    padding: 1px 4px;
+                    background-color: #858d95;
+                    border-radius: 20%;
+                    font-size: 10px;
+                    color: #2a3644;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@import "../../constants/variables.scss";
+
+.chat-container {
+    margin-left: 245px;
+    margin-top: 75px;
+
+    .chat-content {
+        overflow-y: scroll;
+        height: calc(100vh - 138px);
+    }
+}
+
+.chat-input {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 245px);
+    padding: 0 25px 25px 25px;
+    background-color: white;
+
+    .form-control {
+        border: 2px solid $dark-gray;
+        height: 45px;
+    }
+
+    .input-group-text {
+        background-color: white;
+        border: 2px solid $dark-gray;
+        border-right: none;
+    }
+
+    .chat-input-form {
+        border-top-right-radius: .25rem !important;
+        border-bottom-right-radius: .25rem !important;
+
+        &:focus {
+            box-shadow: none;
+            z-index: unset;
+        }
+    }
+
+    .chat-input-icon-container {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        line-height: 2.5;
+        color: $dark-gray;
+
+        .svg-inline--fa {
+            vertical-align: middle;
+        }
+
+        .chat-input-icon {
+            margin-right: 10px;
+        }
+    }
+}
+
+.chat-message {
+    padding: 5px 25px;
+    margin: 5px 0;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .chat-message-avatar {
+        float: left;
+
+        .chat-message-avatar-image {
+            border-radius: 10%;
+        }
+    }
+
+    .chat-message-content {
+        margin-left: 50px;
+
+        .chat-message-author-name {
+            font-weight: 900;
+        }
+
+        .chat-message-message-time {
+            margin-left: 5px;
+            font-size: 14px;
+            color: $dark-gray;
+        }
+    }
+}
+
+.chat-header {
+    padding: 20px 0 5px 20px;
+    border-bottom: 1px solid $light-gray;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    height: 75px;
+    width: 100%;
+    -webkit-app-region: drag;
+
+    .chat-header-team-name {
+        font-size: 18px;
+        font-weight: 900;
+    }
+
+    .chat-header-info-item {
+        font-size: 14px;
+        color: $dark-gray;
+    }
+
+    .chat-header-right {
+        line-height: 3;
+        color: $dark-gray;
+
+        .chat-header-right-item {
+            margin-right: 15px;
+        }
+
+        .chat-header-search-icon {
+            position: absolute;
+            margin-left: 10px;
+        }
+
+        .chat-header-search {
+            display: inline-block;
+            width: 170px;
+            padding-left: 32px;
+        }
+    }
+}
